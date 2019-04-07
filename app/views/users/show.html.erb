@@ -1,1 +1,6 @@
 <%= @user.name %>, <%= @user.email %>
+<h3 style="text-align:center;">Events created:</h3>
+	  <% @events.each do |event| %>
+	    <%= render 'event_created', event: event %>
+	  <% end %>
+      <h3 style="text-align:center;">Invitations received:</h3> 
