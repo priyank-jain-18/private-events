@@ -1,5 +1,7 @@
-
-	  <h2 style="margin-bottom:15px;"><%= event.title %></h2>
-	  <h5>Information: <%= event.info %></h5>
-	  <h5>Location: <%= event.location %></h5>
-	  <h5 style="margin-bottom:15px;">Date: <%= event.date.strftime("%A, %d %B, %Y") %></h5>
+<h3>Events by this user: </h3>
+  <span class="user"><%= link_to event.user.name, event.user %></span>
+  <span class="description"><%= event.description %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(event.created_at) %> ago.
+  </span>
+</li>
