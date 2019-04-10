@@ -7,8 +7,3 @@
 	  <%= f.date_field :date, min: Date.today %> 
 	  <%= f.submit "Submit" %>
 	<% end %>
-	<ul>
-	  <% @event.errors.full_messages.each do |msg| %>
-	    <li><%= msg %></li>
-	  <% end %>
-	</ul>
