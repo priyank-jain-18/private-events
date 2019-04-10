@@ -12,10 +12,14 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+  def index
+	      @users = User.all
+	end
   def show
     @user = User.find(params[:id])
     @events = @user.events
-    
+    @upcoming_events = current_user.upcoming_events
+    @prev_events = current_user.previous_events 
   end
 private
 
